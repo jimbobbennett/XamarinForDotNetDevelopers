@@ -14,5 +14,16 @@ namespace MKNative.iOS
     [Register ("ViewController")]
     partial class ViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel Message { get; set; }
+
+        void ReleaseDesignerOutlets ()
+        {
+            if (Message != null) {
+                Message.Dispose ();
+                Message = null;
+            }
+        }
     }
 }

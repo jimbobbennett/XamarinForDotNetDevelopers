@@ -1,4 +1,5 @@
 ﻿using Foundation;
+using MKNative.Core;
 using System;
 using UIKit;
 
@@ -13,7 +14,8 @@ namespace MKNative.iOS
         public override void ViewDidLoad ()
         {
             base.ViewDidLoad ();
-            // Perform any additional setup after loading the view, typically from a nib.
+
+            Message.Text = Stuff.Message;
         }
 
         public override void DidReceiveMemoryWarning ()

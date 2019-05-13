@@ -6,6 +6,7 @@ using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using MKNative.Core;
 
 namespace MKNative.Droid
 {
@@ -22,8 +23,11 @@ namespace MKNative.Droid
             Android.Support.V7.Widget.Toolbar toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
 
-            FloatingActionButton fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
+            var fab = FindViewById<FloatingActionButton>(Resource.Id.fab);
             fab.Click += FabOnClick;
+
+            var textView = FindViewById<TextView>(Resource.Id.message);
+            textView.Text = Stuff.Message;
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
